@@ -30,7 +30,7 @@ IMPLEMENT_DYNAMIC(TVRichEdit, CRichEditCtrl)
 BEGIN_MESSAGE_MAP(TVRichEdit, CRichEditCtrl)
     ON_WM_LBUTTONDBLCLK()
     ON_WM_LBUTTONUP()
-    ON_NOTIFY_REFLECT(EN_SELCHANGE, &TVRichEdit::OnEnSelchange)
+//    ON_NOTIFY_REFLECT(EN_SELCHANGE, &TVRichEdit::OnEnSelchange)
 END_MESSAGE_MAP()
 
 BEGIN_DISPATCH_MAP(TVRichEdit, CRichEditCtrl)
@@ -181,14 +181,7 @@ int TVRichEdit::GetCurrentLine()
     return SendMessage(EM_LINEFROMCHAR, -1, 0);
 }
 
-
-
 // TextViewerEdit message handlers
-
-void TVRichEdit::OnFinalRelease()
-{
-    CRichEditCtrl::OnFinalRelease();
-}
 
 void TVRichEdit::OnLButtonDblClk( UINT nFlags, CPoint point )
 {
@@ -212,13 +205,10 @@ void TVRichEdit::OnLButtonDblClk( UINT nFlags, CPoint point )
             break;
         }
     }
-    
-    
 }
 
 void TVRichEdit::OnLButtonUp(UINT nFlags, CPoint point)
 {
-    // TODO: Add your message handler code here and/or call default
     switch ( nFlags )
     {
     case( MK_CONTROL ):
@@ -232,42 +222,4 @@ void TVRichEdit::OnLButtonUp(UINT nFlags, CPoint point)
             break;
         }
     }
-    
-}
-
-
-//BOOL TVRichEdit::PreCreateWindow(CREATESTRUCT& cs)
-//{
-//    // TODO: Add your specialized code here and/or call the base class
-//
-//    return CRichEditCtrl::PreCreateWindow(cs);
-//}
-
-
-BOOL TVRichEdit::PreTranslateMessage(MSG* pMsg)
-{
-    // TODO: Add your specialized code here and/or call the base class
-
-        return CRichEditCtrl::PreTranslateMessage(pMsg);
-}
-
-
-HRESULT TVRichEdit::accSelect(long flagsSelect, VARIANT varChild)
-{
-    // TODO: Add your specialized code here and/or call the base class
-
-    return CRichEditCtrl::accSelect(flagsSelect, varChild);
-}
-
-
-void TVRichEdit::OnEnSelchange(NMHDR *pNMHDR, LRESULT *pResult)
-{
-    SELCHANGE *pSelChange = reinterpret_cast<SELCHANGE *>(pNMHDR);
-    // TODO:  The control will not send this notification unless you override the
-    // CRichEditCtrl::OnInitDialog() function to send the EM_SETEVENTMASK message
-    // to the control with the ENM_SELCHANGE flag ORed into the lParam mask.
-
-    // TODO:  Add your control notification handler code here
-
-    *pResult = 0;
 }

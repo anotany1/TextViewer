@@ -14,24 +14,11 @@ namespace Logic
 
     class SearchVector
     {
-     //variables
-
-    protected:
-        CString keyword;
-        CPoint point;
-        long selPosition;
-
-        vector<KeywordPosition> positions;
-
-
-    private:
-        //SearchVector( const SearchVector& );
     public:
         SearchVector( CString keyword, long selPosition, CPoint point );
         SearchVector( void );
         ~SearchVector( void );
 
-    //Methods
     public:
         CString GetKeyword();
         void SetKeyword( CString keyword );
@@ -44,6 +31,14 @@ namespace Logic
         CPoint GetPoint();
         long GetSelPosition();
 
+    //variables
+
+    protected:
+        CString keyword;
+        CPoint point;
+        long selPosition;
+
+        vector<KeywordPosition> positions;
     };
 
 

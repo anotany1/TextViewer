@@ -8,10 +8,10 @@ const int SearchRestrictions::SearchArea = 500000000;
 
 SearchRestrictions::SearchRestrictions(int searchArea, int maxSearchItemCount, int minKeywordLength, int maxKeywordLength)
 {
-        this->searchArea = Check( 1, SearchArea, searchArea );
-        this->maxSearchItemCount = Check ( 1, MaxSearchItemCount, maxSearchItemCount );
-        this->minKeywordLength = Check( 1, MinKeywordLength, minKeywordLength );
-        this->maxKeywordLength = Check( this->minKeywordLength, MaxKeywordLength, maxKeywordLength );
+    this->searchArea = Check( 1, SearchArea, searchArea );
+    this->maxSearchItemCount = Check ( 1, MaxSearchItemCount, maxSearchItemCount );
+    this->minKeywordLength = Check( 1, MinKeywordLength, minKeywordLength );
+    this->maxKeywordLength = Check( this->minKeywordLength, MaxKeywordLength, maxKeywordLength );
 }
 
 

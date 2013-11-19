@@ -6,7 +6,9 @@
 #include "SearchVector.h"
 #include <stack>
 
+
 using namespace Logic;
+
 
 class CChildView : public CWnd
 {

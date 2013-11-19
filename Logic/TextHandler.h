@@ -7,10 +7,6 @@ namespace Logic
 {
     class TextHandler : public BaseHandler
     {
-    protected:
-        std::wstring text;
-
-
     public:
         TextHandler( void );
         ~TextHandler( void );
@@ -24,5 +20,10 @@ namespace Logic
         void WriteFile( std::wstring fileName );
 
         const std::wstring & GetText();
+
+    
+
+    protected:
+        std::wstring text;
     };
 }

@@ -7,10 +7,14 @@
 #include "TVRichEdit.h"
 #include "SearchVector.h"
 
+
 using namespace Logic;
+
 
 class CMainFrame : public CFrameWndEx
 {
+    DECLARE_DYNAMIC( CMainFrame )
+
 public:
     CMainFrame();
     virtual ~CMainFrame();
@@ -46,7 +50,6 @@ protected:
     afx_msg LRESULT OnUWMSearchListClick( WPARAM wParam, LPARAM lParam );
     afx_msg LRESULT OnUWMHistoryClick( WPARAM wParam, LPARAM lParam );
 
-    DECLARE_DYNAMIC( CMainFrame )
     DECLARE_MESSAGE_MAP()
 
 //variables
@@ -55,6 +58,7 @@ public:
     static const int MaxHistoryVectorSize;
     static const int MinListBoxWidth;
     static const int MinListBoxHeight;
+
 protected:
     CMFCMenuBar       m_wndMenuBar;
     CMFCToolBar       m_wndToolBar;

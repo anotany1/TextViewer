@@ -6,6 +6,7 @@ namespace Logic
     {
     public:
         long position;
+
     public:
         KeywordPosition(void);
         virtual ~KeywordPosition(void);

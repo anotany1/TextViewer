@@ -3,7 +3,9 @@
 #include <list>
 #include "KeywordPosition.h"
 
+
 using namespace std;
+
 
 namespace Logic
 {
@@ -16,12 +18,9 @@ namespace Logic
         SearchList( CString keyword, long selPosition, CPoint point);
         ~SearchList( void );
     private:
-        //SearchList( const SearchList& );
         SearchList( void );
     
-
-
-    //Methods
+    
     public:
         CString GetKeyword();
         void SetKeyword( CString keyword );
@@ -39,7 +38,7 @@ namespace Logic
     
         long GetSelPosition();
 
-        //variables
+    //variables
 
     protected:
         list<KeywordPosition> positions;
