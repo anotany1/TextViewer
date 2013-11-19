@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextViewer", "TextViewer\TextViewer.vcxproj", "{332C2EE1-E051-4886-BC41-94AEC6D3CFC0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0D617B00-3622-4AA0-964F-9511163BA764} = {0D617B00-3622-4AA0-964F-9511163BA764}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Logic", "Logic\Logic.vcxproj", "{0D617B00-3622-4AA0-964F-9511163BA764}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332C2EE1-E051-4886-BC41-94AEC6D3CFC0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{332C2EE1-E051-4886-BC41-94AEC6D3CFC0}.Debug|Win32.Build.0 = Debug|Win32
+		{332C2EE1-E051-4886-BC41-94AEC6D3CFC0}.Release|Win32.ActiveCfg = Release|Win32
+		{332C2EE1-E051-4886-BC41-94AEC6D3CFC0}.Release|Win32.Build.0 = Release|Win32
+		{0D617B00-3622-4AA0-964F-9511163BA764}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D617B00-3622-4AA0-964F-9511163BA764}.Debug|Win32.Build.0 = Debug|Win32
+		{0D617B00-3622-4AA0-964F-9511163BA764}.Release|Win32.ActiveCfg = Release|Win32
+		{0D617B00-3622-4AA0-964F-9511163BA764}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
